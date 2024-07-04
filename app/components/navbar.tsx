@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import temporaryImage from "../../public/nberd.webp";
+import logo from "../../public/logo.jpg"
 
 const Navbar = () => {
   const [showDropdown, setShowDropdown] = useState(true);
@@ -29,13 +29,12 @@ const Navbar = () => {
 
   return (
     <div className="w-full fixed top-0 left-0">
-      <div className="w-full flex justify-between">
+      <div className="w-full flex justify-between bg-white">
         
         <Image
-          className="mx-auto"
-            src={temporaryImage}
-            width={75}
-            height={60}
+          className="mx-auto pl-16"
+            src={logo}
+            width={200}
             alt="Picture of the author"
         />
 
@@ -46,13 +45,42 @@ const Navbar = () => {
           <button className="nav-btn rounded-2xl h-4/6 text-lg" onClick={() => {
             setCurrentPage(2)
           }}> NEWS & EVENTS </button>
-          <button className="nav-btn rounded-2xl h-4/6 text-lg"> APPLY NOW </button>
+          <button className="nav-btn rounded-2xl h-4/6 text-lg" onClick={() => {
+            setCurrentPage(2)
+          }}> 
+          APPLY NOW </button>
         </div>
       </div>
 
       {showDropdown && (
         <div className="w-full relative top-0 flex justify-between px-8 py-4 bg-blue-400">
+            {currentPage === 0 && (
+            <>
+              <button className="dropdown-button"> Student Experience </button>
+              <button className="dropdown-button"> Members and Alumni </button>
+              <button className="dropdown-button"> Admissions </button>
+              <button className="dropdown-button"> Directory </button>
+            </>
+          )}
+          {currentPage === 1 && (
+            <>
+              <button className="dropdown-button"> UN Project </button>
+              <button className="dropdown-button"> Creative Writing Program </button>
+              <button className="dropdown-button"> Youth Journalist Program </button>
+              <button className="dropdown-button"> Public Speaking </button>
+              <button className="dropdown-button"> Debate </button>
+            </>
+          )}
           {currentPage === 2 && (
+            <>
+              <button className="dropdown-button"> UN Project </button>
+              <button className="dropdown-button"> Creative Writing Program </button>
+              <button className="dropdown-button"> Youth Journalist Program </button>
+              <button className="dropdown-button"> Public Speaking </button>
+              <button className="dropdown-button"> Debate </button>
+            </>
+          )}
+          {currentPage === 3 && (
             <>
               <button className="dropdown-button"> UN Project </button>
               <button className="dropdown-button"> Creative Writing Program </button>
