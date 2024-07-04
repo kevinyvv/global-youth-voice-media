@@ -10,9 +10,9 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --foreground-rgb: 0, 0, 0;
+    --background-start-rgb: 153, 204, 255;
+    --background-end-rgb: 153, 204, 255;
   }
 }
 
@@ -30,4 +30,15 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+@layer components {
+  .nav-btn {
+    @apply outline outline-white px-4 py-2 rounded-lg bg-blue-300 hover:bg-blue-400;
+  }
+  .dropdown-button {
+    @apply underline;
+  }
+
+  
 }
