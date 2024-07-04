@@ -34,7 +34,7 @@ body {
 
 @layer components {
   .nav-btn {
-    @apply outline outline-white px-4 py-2 rounded-lg bg-blue-300 hover:bg-blue-400;
+    @apply outline outline-white px-16 py-2 rounded-lg bg-blue-300 hover:bg-blue-400;
   }
   .dropdown-button {
     @apply underline;

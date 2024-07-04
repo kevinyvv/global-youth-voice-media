@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Navbar from "../app/components/navbar";
-import temporaryImage from "../public/nberd.webp"
+import temporaryImage from "../public/nberd.webp";
 
 const Hero = () => {
   return (

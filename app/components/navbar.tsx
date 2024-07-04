@@ -1,5 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
+import Image from "next/image";
+import temporaryImage from "../../public/nberd.webp";
 
 const Navbar = () => {
   const [showDropdown, setShowDropdown] = useState(true);
@@ -27,18 +29,24 @@ const Navbar = () => {
 
   return (
     <div className="w-full fixed top-0 left-0">
-      <div className="w-full flex justify-between bg-white h-max py-3 px-2">
-        Logo Here
+      <div className="w-full flex justify-between">
+        
+        <Image
+          className="mx-auto"
+            src={temporaryImage}
+            width={75}
+            height={60}
+            alt="Picture of the author"
+        />
 
-        <div className="flex space-x-6">
-          <button className="nav-btn" onClick={()=>{
+        <div className="flex w-11/12 h-24 space-x-6 bg-white rounded justify-center pt-6">
+          <button className="nav-btn rounded-2xl h-4/6 text-lg" onClick={()=>{
             setCurrentPage(1)
-          }}> About Us </button>
-          <button className="nav-btn" onClick={() => {
+          }}> ABOUT US </button>
+          <button className="nav-btn rounded-2xl h-4/6 text-lg" onClick={() => {
             setCurrentPage(2)
-          }}> Programs </button>
-          <button className="nav-btn"> Upcoming Events </button>
-          <button className="nav-btn"> Past Events</button>
+          }}> NEWS & EVENTS </button>
+          <button className="nav-btn rounded-2xl h-4/6 text-lg"> APPLY NOW </button>
         </div>
       </div>
 
