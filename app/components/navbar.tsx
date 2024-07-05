@@ -2,11 +2,12 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from 'next/link';
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation';
+
 import logo from "../../public/logo.jpg";
 import { Divider } from "@nextui-org/react";
 
-const Navbar = () => {
+const Navbar = ({ pageNumber }: { pageNumber: number }) => {
   const router = useRouter();
   const [showDropdown, setShowDropdown] = useState(true);
   const [currentPage, setCurrentPage] = useState(0);
@@ -30,7 +31,12 @@ const Navbar = () => {
     };
   }, []);
 
-  const handleNavigation = (page, url) => {
+  useEffect(() => {
+    console.log(pageNumber)
+    setCurrentPage(pageNumber);
+  }, [])
+
+  const handleNavigation = (page:any, url:any) => {
     setCurrentPage(page);
     router.push(url, undefined, { shallow: true });
   };
