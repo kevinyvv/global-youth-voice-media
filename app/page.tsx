@@ -1,8 +1,18 @@
+"use client"
+
+import React from 'react'
 import Image from "next/image";
 import Navbar from "../app/components/navbar";
 import temporaryImage from "../public/nberd.webp";
+import logo from "../public/logo.jpg"
+import useEmblaCarousel from 'embla-carousel-react'
+import Autoplay from 'embla-carousel-autoplay'
+
 
 const Hero = () => {
+  const [emblaRef] = useEmblaCarousel({ loop: true }, [Autoplay()])
+
+
   return (
     <div className="full">
       <div className="max-w-[800px] w-full h-screen mx-auto text-center">
@@ -17,7 +27,7 @@ const Hero = () => {
         </b>  
         <Image
         className="mt-16 mx-auto mb-16"
-          src={temporaryImage}
+          src={logo}
           width={600}
           height={600}
           alt="Picture of the author"
@@ -37,7 +47,7 @@ const Hero = () => {
         </h3>
         <Image
         className="mx-auto"
-          src={temporaryImage}
+          src={logo}
           width={600}
           height={600}
           alt="Picture of the author"
@@ -61,7 +71,7 @@ const Hero = () => {
         </h3>
         <Image
         className="mx-auto"
-          src={temporaryImage}
+          src={logo}
           width={600}
           height={600}
           alt="Picture of the author"
@@ -75,7 +85,7 @@ const Hero = () => {
 
         <Image
         className="mx-auto"
-          src={temporaryImage}
+          src={logo}
           width={600}
           height={600}
           alt="Picture of the author"
@@ -95,7 +105,7 @@ const Hero = () => {
 
         <Image
         className="mx-auto"
-          src={temporaryImage}
+          src={logo}
           width={600}
           height={600}
           alt="Picture of the author"
@@ -107,9 +117,64 @@ const Hero = () => {
 
         </span>
       </div>
+      <div className="embla" ref={emblaRef}>
+      <div className="embla__container">
+        <div className="embla__slide"> 
+        <div className='text-center text-white'>
+        <Image
+        className="mx-auto"
+          src={logo}
+          width={600}
+          height={600}
+          alt="Picture of the author"
+        />
+        <p className='mt-4'>Text below</p>
+        </div>
+        </div>
+        <div className="embla__slide">
+        
+        <Image
+        className="mx-auto"
+          src={logo}
+          width={600}
+          height={600}
+          alt="Picture of the author"
+        />
+
+        </div>
+        <div className="embla__slide">
+        <Image
+        className="mx-auto"
+          src={logo}
+          width={600}
+          height={600}
+          alt="Picture of the author"
+        />
+        </div>
+
+        <div className="embla__slide">
+        <Image
+        className="mx-auto"
+          src={logo}
+          width={600}
+          height={600}
+          alt="Picture of the author"
+        />
+        </div>
+        
+        <div className="embla__slide">
+        <Image
+        className="mx-auto"
+          src={logo}
+          width={600}
+          height={600}
+          alt="Picture of the author"
+        />
+        </div>
 
 
-      
+      </div>
+    </div>
     </div>
   )
 }
