@@ -41,6 +41,8 @@ body {
   }
   .embla {
     overflow: hidden;
+    width: 100%;
+    position: relative;
   }
   .embla__container {
     display: flex;
@@ -49,6 +51,7 @@ body {
     flex: 0 0 30%;
     min-width: 400px;
     padding: 8px;
+    overflow: hidden;
   }
   
 }

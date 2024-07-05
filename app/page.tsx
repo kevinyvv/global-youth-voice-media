@@ -14,11 +14,11 @@ const Hero = () => {
 
 
   return (
-    <div className="full">
-      <div className="max-w-[800px] w-full h-screen mx-auto text-center">
+    <div className="w-full">
+      <div className="w-full h-[70svh] mx-auto text-center">
         
-        <span className="mt-24 inline-block justify-center ">
-        <h1 className="
+        <span className="mt-24 justify-center ">
+        <h1 className=" mt-16
          text-white  p-4 text-6xl"> 
         Welcome to 
         </h1>
@@ -34,11 +34,12 @@ const Hero = () => {
         />
         </span>
 
+
         <span className="mt-96 text-white text-3xl">
           We're a dynamic platform empowering kids to step into the spotlight as interviewers, journalists, and cultural commentators.
         </span>   
       </div>
-      <div className="max-w-[800px] w-full h-screen mx-auto text-center flex items-center justify-center">
+      <div className="w-full h-screen mx-auto text-center flex items-center justify-center">
         
         <span className="mt-48 flex align-top my-aut top-1/2">
         <h3 className="
@@ -62,7 +63,7 @@ const Hero = () => {
         <button className="rounded-lg bg-blue-500 px-4 text-3xl font-bold mx-auto"> Apply </button>
       </span>
 
-      <div className="max-w-[800px] w-full h-[80svh] mx-auto text-center flex items-center justify-center">
+      <div className="w-full h-[80svh] mx-auto text-center flex items-center justify-center">
         
         <span className="mt-48 flex align-top my-aut top-1/2">
         <h3 className="
@@ -79,7 +80,7 @@ const Hero = () => {
         </span>
       </div>
 
-      <div className="max-w-[800px] w-full h-[80svh] mx-auto text-center flex items-center justify-center">
+      <div className="w-full h-[80svh] mx-auto text-center flex items-center justify-center">
         
         <span className="mt-48 flex align-top my-aut top-1/2">
 
@@ -99,7 +100,7 @@ const Hero = () => {
       </div>
 
 
-      <div className="max-w-[800px] w-full h-[80svh] mx-auto text-center flex items-center justify-center">
+      <div className="w-full h-[80svh] mx-auto text-center flex items-center justify-center">
         
         <span className="mt-48 flex align-top my-aut top-1/2">
 
@@ -117,6 +118,7 @@ const Hero = () => {
 
         </span>
       </div>
+
       <div className="embla" ref={emblaRef}>
       <div className="embla__container">
         <div className="embla__slide"> 
