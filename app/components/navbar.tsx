@@ -83,7 +83,7 @@ const Navbar = () => {
 
       {showDropdown && (
         <>
-        <div className="w-full relative top-0 flex justify-between px-8 py-4 bg-blue-400">
+        <div className="w-full relative top-0 flex justify-between px-8 py-8 bg-blue-400">
             {currentPage === 0 && (
             <>
               <button className="dropdown-button"> Student Experience </button>

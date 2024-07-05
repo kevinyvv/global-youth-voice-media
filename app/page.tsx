@@ -2,9 +2,11 @@
 
 import React from 'react'
 import Image from "next/image";
+import Link from 'next/link';
+
 import Navbar from "../app/components/navbar";
-import temporaryImage from "../public/nberd.webp";
 import logo from "../public/logo.jpg"
+
 import useEmblaCarousel from 'embla-carousel-react'
 import Autoplay from 'embla-carousel-autoplay'
 
@@ -39,37 +41,47 @@ const Hero = () => {
           We're a dynamic platform empowering kids to step into the spotlight as interviewers, journalists, and cultural commentators.
         </span>   
       </div>
-      <div className="w-full h-screen mx-auto text-center flex items-center justify-center">
+      <div className="w-full h-[60svh] mx-auto text-center flex items-center justify-center">
         
-        <span className="mt-48 flex align-top my-aut top-1/2">
+        <span className="mt-48 flex align-top my-auto top-1/2">
+        <span className='bg-slate-100 rounded-xl py-4 mr-4 min-w-[30svw] grid justify-items-center items-center'>
         <h3 className="
-         text-white  p-4 text-6xl"> 
+           p-4 text-5xl font-bold"> 
         What's next in the program?
         </h3>
+        <p className=''> 
+          Take a look at our available programs!
+        </p>
+        <button className='bg-blue-500 self-center rounded-lg text-white font-bold py-2 px-4 mt-auto max-w-fit'>
+        Programs
+        </button>
+        </span>
         <Image
         className="mx-auto"
           src={logo}
-          width={600}
-          height={600}
+          width={500}
           alt="Picture of the author"
         />
         </span>
       </div>
 
-      <span className="grid justify-center w-full">
-        <span className="mb-16 text-3xl font-bold">
+      <span className="grid justify-center w-full bg-blue-400 rounded-2xl py-16">
+        <span className="mb-16 text-3xl font-bold text-center">
             Where young minds become the voices of today!
         </span>
-        <button className="rounded-lg bg-blue-500 px-4 text-3xl font-bold mx-auto"> Apply </button>
+        <Link href='/ApplyNow' className="rounded-lg bg-blue-500 px-4 py-2 text-3xl font-bold mx-auto"> Apply Now! </Link>
       </span>
 
-      <div className="w-full h-[80svh] mx-auto text-center flex items-center justify-center">
+      <div className="w-full h-[60svh] mx-auto text-center flex items-center justify-center">
         
         <span className="mt-48 flex align-top my-aut top-1/2">
+        <span>
         <h3 className="
          text-white  p-4 text-6xl"> 
           Learn more about...
         </h3>
+        <Link href='/Admissions' className='text-white bg-blue-500,'> Click Here </Link>
+        </span>
         <Image
         className="mx-auto"
           src={logo}
@@ -80,7 +92,7 @@ const Hero = () => {
         </span>
       </div>
 
-      <div className="w-full h-[80svh] mx-auto text-center flex items-center justify-center">
+      <div className="w-full h-[60svh] mx-auto text-center flex items-center justify-center">
         
         <span className="mt-48 flex align-top my-aut top-1/2">
 
@@ -100,7 +112,7 @@ const Hero = () => {
       </div>
 
 
-      <div className="w-full h-[80svh] mx-auto text-center flex items-center justify-center">
+      <div className="w-full h-[60svh] mx-auto text-center flex items-center justify-center">
         
         <span className="mt-48 flex align-top my-aut top-1/2">
 

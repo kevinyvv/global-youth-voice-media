@@ -40,6 +40,9 @@ body {
     @apply underline;
   }
   .embla {
+    margin-top: 15svh;
+    display: grid;
+    justify-content: center;
     overflow: hidden;
     width: 100%;
     position: relative;
