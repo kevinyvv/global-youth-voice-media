@@ -5,7 +5,7 @@ export default function Directory() {
       <main className="flex min-h-screen flex-col items-center justify-between p-24">
         <Navbar pageNumber={3}/>
         <span></span>
-        <p> Student Experience </p>
+        <p> Members and Alumni </p>
       </main>
     );
   }

@@ -32,11 +32,10 @@ const Navbar = ({ pageNumber }: { pageNumber: number }) => {
   }, []);
 
   useEffect(() => {
-    console.log(pageNumber)
     setCurrentPage(pageNumber);
   }, [])
 
-  const handleNavigation = (page:any, url:any) => {
+  const handleNavigation = (page: any, url: any) => {
     setCurrentPage(page);
     router.push(url, undefined, { shallow: true });
   };
@@ -82,24 +81,32 @@ const Navbar = ({ pageNumber }: { pageNumber: number }) => {
           <div className="w-full relative top-0 flex justify-between px-8 py-8 bg-blue-400">
             {currentPage === 0 && (
               <>
-                <button className="dropdown-button"> Student Experience </button>
-                <button className="dropdown-button"> Members and Alumni </button>
-                <button className="dropdown-button"> 
+                <button className="dropdown-button">
+                  <Link href='/StudentExperience'>Student Experience</Link>
+                </button>
+                <button className="dropdown-button">
+                  <Link href='Members&Alumni'>Members and Alumni</Link>
+                </button>
+                <button className="dropdown-button">
                   <Link href='/Admissions'> Admissions </Link>
                 </button>
-                <button className="dropdown-button"> 
+                <button className="dropdown-button">
                   <Link href='/Directory'> Directory </Link>
                 </button>
               </>
             )}
             {currentPage === 1 && (
               <>
-                <button className="dropdown-button"> Student Experience </button>
-                <button className="dropdown-button"> Members and Alumni </button>
-                <button className="dropdown-button"> 
+                <button className="dropdown-button">
+                  <Link href='/StudentExperience'>Student Experience</Link>
+                </button>
+                <button className="dropdown-button">
+                  <Link href='Members&Alumni'>Members and Alumni</Link>
+                </button>
+                <button className="dropdown-button">
                   <Link href='/Admissions'> Admissions </Link>
                 </button>
-                <button className="dropdown-button"> 
+                <button className="dropdown-button">
                   <Link href='/Directory'> Directory </Link>
                 </button>
               </>
@@ -115,12 +122,16 @@ const Navbar = ({ pageNumber }: { pageNumber: number }) => {
             )}
             {currentPage === 3 && (
               <>
-                <button className="dropdown-button"> Student Experience </button>
-                <button className="dropdown-button"> Members and Alumni </button>
-                <button className="dropdown-button"> 
+                <button className="dropdown-button">
+                  <Link href='/StudentExperience'>Student Experience</Link>
+                </button>
+                <button className="dropdown-button">
+                  <Link href='Members&Alumni'>Members and Alumni</Link>
+                </button>
+                <button className="dropdown-button">
                   <Link href='/Admissions'> Admissions </Link>
                 </button>
-                <button className="dropdown-button"> 
+                <button className="dropdown-button">
                   <Link href='/Directory'> Directory </Link>
                 </button>
               </>
